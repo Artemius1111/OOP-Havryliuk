@@ -15,7 +15,7 @@ namespace Lab3
         {
             _cacheData = new Dictionary<string, string>();
             _isActive = true;
-            Console.WriteLine("[MemoryCache] Кеш створено, ресурс активний.");
+            Console.WriteLine("Кеш створено, ресурс активний.");
         }
 
         public void Set(string key, string value)
@@ -24,7 +24,7 @@ namespace Lab3
                 throw new ObjectDisposedException(nameof(MemoryCache), "Кеш закрито або знищено.");
 
             _cacheData[key] = value;
-            Console.WriteLine($"[MemoryCache] Записано: {key} = {value}");
+            Console.WriteLine($"Записано: {key} = {value}");
         }
 
         public string? Get(string key)
@@ -41,14 +41,14 @@ namespace Lab3
             {
                 if (disposing)
                 {
-                    Console.WriteLine("[Dispose] Очищення керованого ресурсу (_cacheData).");
+                    Console.WriteLine("Очищення керованого ресурсу.");
                     _cacheData?.Clear();
                     _cacheData = null;
                 }
 
                 if (_isActive)
                 {
-                    Console.WriteLine("[Dispose] Деактивація ресурсу (_isActive = false).");
+                    Console.WriteLine("Деактивація ресурсу.");
                     _isActive = false;
                 }
 
@@ -64,7 +64,7 @@ namespace Lab3
 
         ~MemoryCache()
         {
-            Console.WriteLine("[~MemoryCache] Спрацював деструктор (Фіналізатор) через GC!");
+            Console.WriteLine("Спрацював деструктор через GC!");
             Dispose(false);
         }
     }
@@ -92,8 +92,7 @@ namespace Lab3
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
-            Console.WriteLine("\nРоботу програми завершено.");
-        }
+    }
 
         static void CreateAndForgetObject()
         {
