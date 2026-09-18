@@ -24,13 +24,4 @@
 * Ініціалізовано локальний Git-репозиторій, прив'язано його до віддаленого репозиторію `Artemius1111/OOP-Havryliuk`.
 * Виконано фіксацію стану коду (commit) та збереження результатів у гілці `main` на GitHub.
 
-<img width="674" height="85" alt="image" src="https://github.com/user-attachments/assets/4ebf45d4-0c33-4041-8cea-aa7caa42c613" />
-
-
-## Як запустити проєкт
-
-1. Клонувати репозиторій:
-   ```bash
-   git clone [https://github.com/Artemius1111/OOP-Havryliuk.git](https://github.com/Artemius1111/OOP-Havryliuk.git)
-
-   
+<img width="674" height="85" alt="image" src="https://github.com/user-attachments/assets/4ebf45d4-0c33-4041-8cea-aa7caa42c613" />   
